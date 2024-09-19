@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #0a1930;
+    --highligth-text: #64ffda;
+    --text-color: #5e6a81;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+    height: 100dvh;
+    line-height: 1.4;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.4rem 2.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.4rem;
+}
+
+nav a {
+    font-family: "JetBrains Mono";
+    color: var(--highligth-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+strong {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+nav a strong:hover {
+    color: white;
+}
+
+.resume {
+    border: 1px solid var(--highligth-text);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resume:hover {
+    background-color: var(--highligth-text);
+    color: var(--background);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 80vh;
+    margin-left: 15rem;
+}
+
+.intro {
+    max-width: 50rem;
+    text-align: left;
+}
+
+.intro p {
+    font-family: "JetBrains Mono";
+    color: var(--highligth-text);
+    font-size: 1.2rem;
+}
+
+.intro h1 {
+    color: #ccd7f7;
+    font-size: 4rem;
+}
+
+.intro h2 {
+    color: #8891b0;
+    font-size: 4rem;
+}
+
+.description {
+    max-width: 35rem;
+    display: flex;
+}
+
+.description p {
+    color: var(--text-color);
+    font-family: "Open Sans";
+}
+
+.description p span {
+    text-decoration: none;
+    color: var(--highligth-text);
+}
+
+.cta-button {
+    font-family: "JetBrains Mono";
+    text-decoration: none;
+    color: var(--highligth-text);
+    border: 1px solid var(--highligth-text);
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--highligth-text);
+    color: var(--background);
+    transform: scale(1.1);
+}
