@@ -23,8 +23,8 @@ body {
 
 nav {
     display: flex;
-    justify-content: flex-end;
-    padding: 1.4rem 2.8rem;
+    justify-content: space-between;
+    padding: 1.4rem 2rem;
 }
 
 nav ul {
@@ -40,6 +40,21 @@ nav a {
     transition: color 0.3s ease;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.social-icons a {
+    color: var(--text-color);
+}
+
+.fa-brands {
+    scale: 2;
+}
+
 strong {
     color: var(--text-color);
     transition: color 0.3s ease;
@@ -49,14 +64,14 @@ nav a strong:hover {
     color: white;
 }
 
-.resume {
+.contact {
     border: 1px solid var(--highligth-text);
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.resume:hover {
+.contact:hover {
     background-color: var(--highligth-text);
     color: var(--background);
 }
@@ -103,8 +118,7 @@ main {
     font-family: "Open Sans";
 }
 
-.description p span {
-    text-decoration: none;
+span {
     color: var(--highligth-text);
 }
 
@@ -195,7 +209,7 @@ main {
         justify-content: flex-start;
     }
 
-    .active .resume {
+    .active .contact {
         display: none;
     }
 
@@ -205,17 +219,20 @@ main {
 
     .active ul li a{
         transition-duration: 0.5s;
-        font-size: 3rem;
+        font-size: 2rem;
         line-height: 10rem;
     } 
-}
 
-@media (max-width: 425px) {
     .intro h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .intro h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .intro .description p {
+        font-size: 1.5rem;
+        margin-top: 2rem;
     }
 }
