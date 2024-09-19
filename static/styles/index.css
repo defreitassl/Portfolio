@@ -224,15 +224,19 @@ span {
     } 
 
     .intro h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .intro h2 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .intro .description p {
         font-size: 1.5rem;
         margin-top: 2rem;
+    }
+
+    .cta-button {
+        font-size: larger;
     }
 }
