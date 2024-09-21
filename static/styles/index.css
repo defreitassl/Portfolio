@@ -245,4 +245,12 @@ span {
     .cta-button {
         font-size: larger;
     }
+
+    .social-icons {
+        gap: 2.5rem;
+    }
+
+    .social-icons a {
+        scale: 1.3;
+    }
 }
