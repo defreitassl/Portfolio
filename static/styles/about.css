@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #0a1930;
+    --highligth-text: #64ffda;
+    --text-color: #5e6a81;
+    --menu-toggle-color: #112441;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+    height: 100dvh;
+    line-height: 1.4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.4rem 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.4rem;
+}
+
+nav a {
+    font-family: "JetBrains Mono";
+    color: var(--highligth-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.social-icons a {
+    color: var(--text-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.3);
+    color: #f0f0f0;
+}
+
+.fa-brands {
+    scale: 2;
+}
+
+strong {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+span {
+    color: var(--highligth-text);
+}
+
+nav a strong:hover {
+    color: white;
+}
+
+.contact {
+    border: 1px solid var(--highligth-text);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact:hover {
+    background-color: var(--highligth-text);
+    color: var(--background);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.img-box {
+    
+}
+
+.personal-img {
+    border-radius: 100%;
+    width: 350px;
+}
+
+.hero-text {
+    width: 100% ;
+}
+
+h1{
+    font-size: 4.5rem;
+    color: #ccd7f7;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+
+
+
+@media (max-width: 728px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+
+@media (max-width: 425px){
+    nav ul{
+        display: none;
+    }
+
+    .one, .two, .three {
+        background-color: var(--highligth-text);
+        width: 100%;
+        height: 5px;
+        margin: 6px auto;
+        transition-duration: 0.3s;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+    }
+
+    .active {
+        position: absolute;
+        
+        top: 15px;
+        left: -27px;
+
+        width: 100vw;
+        height: 100vh;
+
+        background-color: var(--background);
+
+        z-index: 10;
+    } 
+
+    .active .menu-toggle {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .active .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .active .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .active .menu-toggle .three {
+        transform: rotate(-45deg) translate(8px, -9px);
+    }
+
+    .active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .active .contact {
+        display: none;
+    }
+
+    .active ul {
+        display: inline;
+    }
+
+    .active ul li a{
+        transition-duration: 0.5s;
+        font-size: 2rem;
+        line-height: 10rem;
+    } 
+
+    .social-icons {
+        gap: 2.5rem;
+    }
+
+    .social-icons a {
+        scale: 1.3;
+    }
+}
