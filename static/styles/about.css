@@ -90,17 +90,16 @@ nav a strong:hover {
 main {
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    align-items: start;
 }
 
 .hero {
     display: flex;
     align-items: center;
     gap: 3rem;
-}
-
-.img-box {
-    
+    border-bottom: 2px solid var(--highligth-text);
+    padding-bottom: 3rem;
+    margin: 3rem 3rem 0rem;
 }
 
 .personal-img {
@@ -108,19 +107,40 @@ main {
     width: 350px;
 }
 
-.hero-text {
-    width: 100% ;
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    line-height: 1;
 }
 
 h1{
-    font-size: 4.5rem;
+    font-size: 4rem;
     color: #ccd7f7;
 }
 
-h2 {
-    font-size: 3rem;
+.intro-text > h2 {
+    font-size: 4rem;
+    margin-bottom: 15px;
 }
 
+.intro-text > p {
+    width: 80%;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.about-me {
+    display: flex;
+    padding: 3rem;
+    background-color: var(--menu-toggle-color);
+    width: 100%;
+}
+
+.how-started > h2 {
+    font-size: 4rem;
+    color: var(--highligth-text);
+}
 
 
 
