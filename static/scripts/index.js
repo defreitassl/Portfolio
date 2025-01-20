@@ -12,19 +12,6 @@ function typeEffect(element, text, delay, callback) {
     type();
 }
 
-function clearEffect(element, text, delay, callback) {
-    let index = text.length;
-    function clear() {
-        if (index > 0) {
-            element.textContent = text.slice(0, index - 1);
-            index--;
-            setTimeout(clear, delay);
-        } else if (callback) {
-            callback();
-        }
-    }
-    clear();
-}
 
 document.addEventListener("DOMContentLoaded", () => {
     const helloElement = document.querySelector(".type-hello");
@@ -35,26 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const nameText = "Douglas Freitas.";
     const presentationText = "Eu desenvolvo softwares.";
 
-    const loopTypingEffect = () => {
-        typeEffect(helloElement, helloText, 100, () => {
-            typeEffect(nameElement, nameText, 100, () => {
-                typeEffect(presentationElement, presentationText, 100, () => {
-                    setTimeout(() => {
-                        clearEffect(presentationElement, presentationText, 50, () => {
-                            clearEffect(nameElement, nameText, 50, () => {
-                                clearEffect(helloElement, helloText, 50, loopTypingEffect);
-                            });
-                        });
-                    }, 2000); // Delay before clearing text
-                });
-            });
+    // Call typeEffect for each element without looping
+    typeEffect(helloElement, helloText, 100, () => {
+        typeEffect(nameElement, nameText, 100, () => {
+            typeEffect(presentationElement, presentationText, 100)
         });
-    };
+    });
 
     // Set static space for text to avoid layout shifting
     helloElement.style.minWidth = `${helloText.length}ch`;
     nameElement.style.minWidth = `${nameText.length}ch`;
     presentationElement.style.minWidth = `${presentationText.length}ch`;
-
-    loopTypingEffect();
 });
