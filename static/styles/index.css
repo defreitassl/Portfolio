@@ -98,18 +98,24 @@ main {
     text-align: left;
 }
 
-.intro p {
+.presentation {
+    line-height: 4rem;
+    padding-bottom: 1rem;
+}
+
+.presentation p {
     font-family: "JetBrains Mono";
     color: var(--highligth-text);
     font-size: 1.2rem;
+    line-height: 1.5rem;
 }
 
-.intro h1 {
+.presentation h1 {
     color: #ccd7f7;
     font-size: 4rem;
 }
 
-.intro h2 {
+.presentation h2 {
     color: #8891b0;
     font-size: 4rem;
 }
@@ -122,6 +128,7 @@ main {
 .description p {
     color: var(--text-color);
     font-family: "Open Sans";
+    font-size: 1.2rem;
 }
 
 span {
